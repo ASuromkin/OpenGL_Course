@@ -54,55 +54,55 @@ int main(void)
 
 
     glViewport(0, 0, WIDTH, HEIGHT);
-
+    glEnable(GL_DEPTH_TEST);
 
 
 
     Shader lightingShader("/home/alex/Examples/Newtry1/Shaders/Light.vert", "/home/alex/Examples/Newtry1/Shaders/Light.frag");
     Shader lampShader("/home/alex/Examples/Newtry1/Shaders/Lamp.vert", "/home/alex/Examples/Newtry1/Shaders/Lamp.frag");
 
-    GLfloat vertices[] = {
-        -0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f, -0.5f,
-         0.5f,  0.5f, -0.5f,
-         0.5f,  0.5f, -0.5f,
-        -0.5f,  0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
+    float vertices[] = {
+        -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+         0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
-        -0.5f, -0.5f,  0.5f,
-         0.5f, -0.5f,  0.5f,
-         0.5f,  0.5f,  0.5f,
-         0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
-        -0.5f, -0.5f,  0.5f,
+        -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+         0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
 
-        -0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
-        -0.5f, -0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+        -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+        -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+        -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
 
-         0.5f,  0.5f,  0.5f,
-         0.5f,  0.5f, -0.5f,
-         0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f,  0.5f,
-         0.5f,  0.5f,  0.5f,
+         0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+         0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+         0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+         0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+         0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
 
-        -0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f, -0.5f,
-         0.5f, -0.5f,  0.5f,
-         0.5f, -0.5f,  0.5f,
-        -0.5f, -0.5f,  0.5f,
-        -0.5f, -0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+         0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+         0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+         0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+        -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+        -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
 
-        -0.5f,  0.5f, -0.5f,
-         0.5f,  0.5f, -0.5f,
-         0.5f,  0.5f,  0.5f,
-         0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f, -0.5f
+        -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+         0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+         0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+        -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+        -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
     };
     // First, set the container's VAO (and VBO)
     GLuint VBO, containerVAO;
@@ -114,8 +114,10 @@ int main(void)
 
     glBindVertexArray(containerVAO);
     // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(1);
     glBindVertexArray(0);
 
     // Then, we set the light's VAO (VBO stays the same. After all, the vertices are the same for the light object (also a 3D cube))
@@ -125,7 +127,7 @@ int main(void)
     // We only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need.
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     // Set the vertex attributes (only position data for the lamp))
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
     glBindVertexArray(0);
 
@@ -151,13 +153,17 @@ int main(void)
         lightingShader.Use();
         GLint objectColorLoc = glGetUniformLocation(lightingShader.Program, "objectColor");
         GLint lightColorLoc  = glGetUniformLocation(lightingShader.Program, "lightColor");
+        GLint lightPosLoc = glGetUniformLocation(lightingShader.Program, "lightPos");
+        GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
+        glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
+        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
         glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);
         glUniform3f(lightColorLoc,  1.0f, 0.5f, 1.0f);
 
         // Create camera transformations
         glm::mat4 view(1.0f);
         view = camera.GetViewMatrix();
-        glm::mat4 projection = glm::perspective(camera.Zoom, (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
+        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
         // Get the uniform locations
         GLint modelLoc = glGetUniformLocation(lightingShader.Program, "model");
         GLint viewLoc  = glGetUniformLocation(lightingShader.Program,  "view");
@@ -172,6 +178,8 @@ int main(void)
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
+
+
 
         // Also draw the lamp object, again binding the appropriate shader
         lampShader.Use();
