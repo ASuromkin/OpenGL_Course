@@ -20,7 +20,11 @@ pkg_check_modules(GLFW REQUIRED glfw3)
 
 
 
-add_executable(Newtry1  ./Sources/main.cpp ./Sources/shader.cpp ./Sources/camera.cpp)
+add_executable(Newtry1
+    ./Sources/main.cpp
+    ./Sources/shader.cpp
+    ./Sources/camera.cpp
+    ./Sources/glad.c)
 
 include_directories(./Headers)
 include_directories(/usr/local/include)
