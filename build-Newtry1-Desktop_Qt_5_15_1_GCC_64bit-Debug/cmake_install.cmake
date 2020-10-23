@@ -42,6 +42,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

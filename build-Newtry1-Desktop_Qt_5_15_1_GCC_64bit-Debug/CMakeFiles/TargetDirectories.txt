@@ -1,3 +1,6 @@
 /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
 /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
 /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/Newtry1.dir
+/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad/CMakeFiles/edit_cache.dir
+/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad/CMakeFiles/rebuild_cache.dir
+/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad/CMakeFiles/glad.dir

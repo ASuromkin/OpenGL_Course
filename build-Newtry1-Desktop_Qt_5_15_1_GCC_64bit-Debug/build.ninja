@@ -65,26 +65,26 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 #############################################
 # Order-only phony target for Newtry1
 
-build cmake_object_order_depends_target_Newtry1: phony || CMakeFiles/Newtry1.dir
+build cmake_object_order_depends_target_Newtry1: phony || cmake_object_order_depends_target_glad
 
 build CMakeFiles/Newtry1.dir/Sources/main.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/main.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/main.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
 build CMakeFiles/Newtry1.dir/Sources/shader.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/shader.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/shader.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
 build CMakeFiles/Newtry1.dir/Sources/camera.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/camera.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/camera.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
@@ -96,9 +96,9 @@ build CMakeFiles/Newtry1.dir/Sources/camera.cpp.o: CXX_COMPILER__Newtry1_Debug /
 #############################################
 # Link the executable Newtry1
 
-build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sources/main.cpp.o CMakeFiles/Newtry1.dir/Sources/shader.cpp.o CMakeFiles/Newtry1.dir/Sources/camera.cpp.o
+build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sources/main.cpp.o CMakeFiles/Newtry1.dir/Sources/shader.cpp.o CMakeFiles/Newtry1.dir/Sources/camera.cpp.o | Glad/libglad.a || Glad/libglad.a
   FLAGS = -g
-  LINK_LIBRARIES = -lglfw  -lGLEW  -lGLU  -lGL
+  LINK_LIBRARIES = -lglfw  -lGLEW  -lGLU  -lGL  Glad/libglad.a
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -106,7 +106,72 @@ build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sourc
   TARGET_PDB = Newtry1.dbg
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/alex/Examples/Newtry1/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad && /home/alex/Qt/Tools/CMake/bin/cmake-gui -S/home/alex/Examples/Newtry1 -B/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build Glad/edit_cache: phony Glad/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad && /home/alex/Qt/Tools/CMake/bin/cmake --regenerate-during-build -S/home/alex/Examples/Newtry1 -B/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Glad/rebuild_cache: phony Glad/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || Glad/CMakeFiles/glad.dir
+
+build Glad/CMakeFiles/glad.dir/src/glad.c.o: C_COMPILER__glad_Debug /home/alex/Examples/Newtry1/Glad/src/glad.c || cmake_object_order_depends_target_glad
+  DEP_FILE = Glad/CMakeFiles/glad.dir/src/glad.c.o.d
+  FLAGS = -g
+  INCLUDES = -IGlad -I/home/alex/Examples/Newtry1/Glad -I/home/alex/Examples/Newtry1/Glad/include
+  OBJECT_DIR = Glad/CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = Glad/CMakeFiles/glad.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library Glad/libglad.a
+
+build Glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug Glad/CMakeFiles/glad.dir/src/glad.c.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Glad/CMakeFiles/glad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Glad/libglad.a
+  TARGET_PDB = glad.a.dbg
+
+# =============================================================================
 # Target aliases.
+
+build glad: phony Glad/libglad.a
+
+build libglad.a: phony Glad/libglad.a
 
 # =============================================================================
 # Folder targets.
@@ -116,7 +181,14 @@ build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sourc
 #############################################
 # Folder: /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug
 
-build all: phony Newtry1
+build all: phony Newtry1 Glad/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Glad
+
+build Glad/all: phony Glad/libglad.a
 
 # =============================================================================
 # Built-in targets
@@ -125,14 +197,14 @@ build all: phony Newtry1
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/alex/Examples/Newtry1/CMakeLists.txt /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPkgConfig.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.18.3/CMakeCXXCompiler.cmake CMakeFiles/3.18.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/alex/Examples/Newtry1/CMakeLists.txt /home/alex/Examples/Newtry1/Glad/CMakeLists.txt /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPkgConfig.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.18.3/CMakeCCompiler.cmake CMakeFiles/3.18.3/CMakeCXXCompiler.cmake CMakeFiles/3.18.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/alex/Examples/Newtry1/CMakeLists.txt /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPkgConfig.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.18.3/CMakeCXXCompiler.cmake CMakeFiles/3.18.3/CMakeSystem.cmake: phony
+build /home/alex/Examples/Newtry1/CMakeLists.txt /home/alex/Examples/Newtry1/Glad/CMakeLists.txt /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeGenericSystem.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeInitializeConfigs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeLanguageInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInformation.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/CMakeSystemSpecificInitialize.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/Clang.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Compiler/GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/FindPkgConfig.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Internal/CMakeCheckCompilerFlag.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-Clang-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-C.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU-CXX.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux-GNU.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/Linux.cmake /home/alex/Qt/Tools/CMake/share/cmake-3.18/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.18.3/CMakeCCompiler.cmake CMakeFiles/3.18.3/CMakeCXXCompiler.cmake CMakeFiles/3.18.3/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -23,14 +23,14 @@ pkg_check_modules(GLFW REQUIRED glfw3)
 add_executable(Newtry1
     ./Sources/main.cpp
     ./Sources/shader.cpp
-    ./Sources/camera.cpp
-    ./Sources/glad.c)
+    ./Sources/camera.cpp)
 
+add_subdirectory(Glad)
 include_directories(./Headers)
 include_directories(/usr/local/include)
 include_directories(/usr/local/include/glm)
 include_directories(/usr/local/include/glm/gtc)
 
 
-target_link_libraries(Newtry1  PRIVATE ${GLFW_LIBRARIES} ${GLEW_LIBRARIES})
+target_link_libraries(Newtry1  PRIVATE ${GLFW_LIBRARIES} ${GLEW_LIBRARIES} glad)
 
