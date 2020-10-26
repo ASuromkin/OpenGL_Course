@@ -228,8 +228,17 @@ QT_QMAKE_EXECUTABLE:STRING=/home/alex/Qt/5.15.1/gcc_64/bin/qmake
 //The directory containing a CMake configuration file for SOIL.
 SOIL_DIR:PATH=SOIL_DIR-NOTFOUND
 
+//Value Computed by CMake
+STBI_BINARY_DIR:STATIC=/home/alex/Examples/build-Newtry1-Desktop_Qt_5_15_1_GCC_64bit-Debug/Headers
+
+//Value Computed by CMake
+STBI_SOURCE_DIR:STATIC=/home/alex/Examples/Newtry1/Headers
+
 //The directory containing a CMake configuration file for glm.
 glm_DIR:PATH=/usr/lib/cmake/glm
+
+//Path to a library.
+pkgcfg_lib_ASSIMP_assimp:FILEPATH=/usr/lib/x86_64-linux-gnu/libassimp.so
 
 //Path to a library.
 pkgcfg_lib_GLEW_GL:FILEPATH=/usr/lib/x86_64-linux-gnu/libGL.so
@@ -248,6 +257,41 @@ pkgcfg_lib_GLFW_glfw:FILEPATH=/usr/lib/x86_64-linux-gnu/libglfw.so
 # INTERNAL cache entries
 ########################
 
+ASSIMP_CFLAGS:INTERNAL=-I/usr/../include/include
+ASSIMP_CFLAGS_I:INTERNAL=
+ASSIMP_CFLAGS_OTHER:INTERNAL=
+ASSIMP_FOUND:INTERNAL=1
+ASSIMP_INCLUDEDIR:INTERNAL=/usr/../include/include
+ASSIMP_INCLUDE_DIRS:INTERNAL=/usr/../include/include
+ASSIMP_LDFLAGS:INTERNAL=-lassimp
+ASSIMP_LDFLAGS_OTHER:INTERNAL=
+ASSIMP_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+ASSIMP_LIBRARIES:INTERNAL=assimp
+ASSIMP_LIBRARY_DIRS:INTERNAL=
+ASSIMP_LIBS:INTERNAL=
+ASSIMP_LIBS_L:INTERNAL=
+ASSIMP_LIBS_OTHER:INTERNAL=
+ASSIMP_LIBS_PATHS:INTERNAL=
+ASSIMP_MODULE_NAME:INTERNAL=assimp
+ASSIMP_PREFIX:INTERNAL=/usr
+ASSIMP_STATIC_CFLAGS:INTERNAL=-I/usr/../include/include
+ASSIMP_STATIC_CFLAGS_I:INTERNAL=
+ASSIMP_STATIC_CFLAGS_OTHER:INTERNAL=
+ASSIMP_STATIC_INCLUDE_DIRS:INTERNAL=/usr/../include/include
+ASSIMP_STATIC_LDFLAGS:INTERNAL=-lassimp;-lstdc++;-lz
+ASSIMP_STATIC_LDFLAGS_OTHER:INTERNAL=
+ASSIMP_STATIC_LIBDIR:INTERNAL=
+ASSIMP_STATIC_LIBRARIES:INTERNAL=assimp;stdc++;z
+ASSIMP_STATIC_LIBRARY_DIRS:INTERNAL=
+ASSIMP_STATIC_LIBS:INTERNAL=
+ASSIMP_STATIC_LIBS_L:INTERNAL=
+ASSIMP_STATIC_LIBS_OTHER:INTERNAL=
+ASSIMP_STATIC_LIBS_PATHS:INTERNAL=
+ASSIMP_VERSION:INTERNAL=5.0.0
+ASSIMP_assimp_INCLUDEDIR:INTERNAL=
+ASSIMP_assimp_LIBDIR:INTERNAL=
+ASSIMP_assimp_PREFIX:INTERNAL=
+ASSIMP_assimp_VERSION:INTERNAL=
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -587,12 +631,14 @@ STB_STATIC_LIBS_L:INTERNAL=
 STB_STATIC_LIBS_OTHER:INTERNAL=
 STB_STATIC_LIBS_PATHS:INTERNAL=
 STB_VERSION:INTERNAL=
+__pkg_config_arguments_ASSIMP:INTERNAL=REQUIRED;assimp
 __pkg_config_arguments_GLEW:INTERNAL=REQUIRED;glew
 __pkg_config_arguments_GLFW:INTERNAL=REQUIRED;glfw3
 __pkg_config_arguments_GLM:INTERNAL=REQUIRED
 __pkg_config_arguments_OpenGL:INTERNAL=REQUIRED
 __pkg_config_arguments_SOIL:INTERNAL=REQUIRED
 __pkg_config_arguments_STB:INTERNAL=REQUIRED
+__pkg_config_checked_ASSIMP:INTERNAL=1
 __pkg_config_checked_GLEW:INTERNAL=1
 __pkg_config_checked_GLFW:INTERNAL=1
 __pkg_config_checked_GLM:INTERNAL=1
@@ -601,6 +647,8 @@ __pkg_config_checked_SOIL:INTERNAL=1
 __pkg_config_checked_STB:INTERNAL=1
 //ADVANCED property for variable: glm_DIR
 glm_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_ASSIMP_assimp
+pkgcfg_lib_ASSIMP_assimp-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GLEW_GL
 pkgcfg_lib_GLEW_GL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GLEW_GLEW

@@ -16,6 +16,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(OpenGL REQUIRED)
 pkg_check_modules(GLEW REQUIRED glew)
 pkg_check_modules(GLFW REQUIRED glfw3)
+pkg_check_modules(ASSIMP REQUIRED assimp)
 
 
 
@@ -23,7 +24,10 @@ pkg_check_modules(GLFW REQUIRED glfw3)
 add_executable(Newtry1
     ./Sources/main.cpp
     ./Sources/shader.cpp
-    ./Sources/camera.cpp)
+    ./Sources/camera.cpp
+    ./Sources/mesh.cpp
+    ./Sources/model.cpp
+    )
 
 add_subdirectory(Glad)
 include_directories(./Headers)
@@ -32,5 +36,5 @@ include_directories(/usr/local/include/glm)
 include_directories(/usr/local/include/glm/gtc)
 
 
-target_link_libraries(Newtry1  PRIVATE ${GLFW_LIBRARIES} ${GLEW_LIBRARIES} glad)
+target_link_libraries(Newtry1  PRIVATE ${GLFW_LIBRARIES} ${GLEW_LIBRARIES} ${ASSIMP_LIBRARIES})
 

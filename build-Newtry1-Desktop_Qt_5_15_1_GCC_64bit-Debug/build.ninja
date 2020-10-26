@@ -65,26 +65,40 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 #############################################
 # Order-only phony target for Newtry1
 
-build cmake_object_order_depends_target_Newtry1: phony || cmake_object_order_depends_target_glad
+build cmake_object_order_depends_target_Newtry1: phony || CMakeFiles/Newtry1.dir
 
 build CMakeFiles/Newtry1.dir/Sources/main.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/main.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/main.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
 build CMakeFiles/Newtry1.dir/Sources/shader.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/shader.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/shader.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
 build CMakeFiles/Newtry1.dir/Sources/camera.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/camera.cpp || cmake_object_order_depends_target_Newtry1
   DEP_FILE = CMakeFiles/Newtry1.dir/Sources/camera.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc -I/home/alex/Examples/Newtry1/Glad/include
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
+  OBJECT_DIR = CMakeFiles/Newtry1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
+
+build CMakeFiles/Newtry1.dir/Sources/mesh.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/mesh.cpp || cmake_object_order_depends_target_Newtry1
+  DEP_FILE = CMakeFiles/Newtry1.dir/Sources/mesh.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
+  OBJECT_DIR = CMakeFiles/Newtry1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
+
+build CMakeFiles/Newtry1.dir/Sources/model.cpp.o: CXX_COMPILER__Newtry1_Debug /home/alex/Examples/Newtry1/Sources/model.cpp || cmake_object_order_depends_target_Newtry1
+  DEP_FILE = CMakeFiles/Newtry1.dir/Sources/model.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I. -I/home/alex/Examples/Newtry1 -I/home/alex/Examples/Newtry1/./Headers -I/usr/local/include/glm -I/usr/local/include/glm/gtc
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   OBJECT_FILE_DIR = CMakeFiles/Newtry1.dir/Sources
 
@@ -96,9 +110,9 @@ build CMakeFiles/Newtry1.dir/Sources/camera.cpp.o: CXX_COMPILER__Newtry1_Debug /
 #############################################
 # Link the executable Newtry1
 
-build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sources/main.cpp.o CMakeFiles/Newtry1.dir/Sources/shader.cpp.o CMakeFiles/Newtry1.dir/Sources/camera.cpp.o | Glad/libglad.a || Glad/libglad.a
+build Newtry1: CXX_EXECUTABLE_LINKER__Newtry1_Debug CMakeFiles/Newtry1.dir/Sources/main.cpp.o CMakeFiles/Newtry1.dir/Sources/shader.cpp.o CMakeFiles/Newtry1.dir/Sources/camera.cpp.o CMakeFiles/Newtry1.dir/Sources/mesh.cpp.o CMakeFiles/Newtry1.dir/Sources/model.cpp.o
   FLAGS = -g
-  LINK_LIBRARIES = -lglfw  -lGLEW  -lGLU  -lGL  Glad/libglad.a
+  LINK_LIBRARIES = -lglfw  -lGLEW  -lGLU  -lGL  -lassimp
   OBJECT_DIR = CMakeFiles/Newtry1.dir
   POST_BUILD = :
   PRE_LINK = :
